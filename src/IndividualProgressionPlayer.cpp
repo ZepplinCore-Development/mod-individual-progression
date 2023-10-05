@@ -363,18 +363,18 @@ public:
         return;
     }
 
-    if (!sIndividualProgression->hasPassedProgression(player, PROGRESSION_NAXX40))
-    {
-        rDungeonId = RDF_CLASSIC;
-    }
-    else if (rDungeonId == RDF_WRATH_OF_THE_LICH_KING && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_5))
-    {
-        rDungeonId = RDF_THE_BURNING_CRUSADE;
-    }
-    else if (rDungeonId == RDF_WRATH_OF_THE_LICH_KING_HEROIC && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_5))
-    {
-        rDungeonId = RDF_THE_BURNING_CRUSADE_HEROIC;
-    }
+    //if (!sIndividualProgression->hasPassedProgression(player, PROGRESSION_NAXX40))
+    //{
+    //    rDungeonId = RDF_CLASSIC;
+    //}
+    //else if (rDungeonId == RDF_WRATH_OF_THE_LICH_KING && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_5))
+    //{
+    //    rDungeonId = RDF_THE_BURNING_CRUSADE;
+    //}
+    //else if (rDungeonId == RDF_WRATH_OF_THE_LICH_KING_HEROIC && !sIndividualProgression->hasPassedProgression(player, PROGRESSION_TBC_TIER_5))
+    //{
+    //    rDungeonId = RDF_THE_BURNING_CRUSADE_HEROIC;
+    //}
 }
 
     bool CanEquipItem(Player* player, uint8 /*slot*/, uint16& /*dest*/, Item* pItem, bool /*swap*/, bool /*not_loading*/) override
