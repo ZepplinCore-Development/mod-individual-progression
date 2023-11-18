@@ -224,7 +224,9 @@ public:
                 break;
             case EVENT_WEB_WRAP:
                 Talk(EMOTE_WEB_WRAP);
-                for (uint8 i = 0; i < 2; ++i)
+                // reducing limit to 1 target for the web wrap
+                // at some point this should be variable based on the number of players in the raid
+                for (uint8 i = 0; i < 1; ++i)
                 {
                     if (Unit* target = SelectTarget(SelectTargetMethod::Random, 1, 0, true, true, -SPELL_WEB_WRAP))
                     {
