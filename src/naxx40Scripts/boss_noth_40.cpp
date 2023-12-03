@@ -284,7 +284,7 @@ public:
                     Talk(EMOTE_TELEPORT_BACK);
                     me->CastSpell(me, SPELL_TELEPORT_BACK, true);
                     timesInBalcony++;
-                    if (timesInBalcony == 3)
+                    if (timesInBalcony == 4)
                     {
                         DoCastSelf(SPELL_BERSERK);
                     }
