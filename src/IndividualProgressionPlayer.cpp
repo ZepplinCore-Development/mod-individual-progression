@@ -253,6 +253,68 @@ public:
             case QUEST_TROLL_NECKLACE:
             case QUEST_DEADWOOD:
             case QUEST_WINTERFALL:
+            // Horde quests
+            case Horde_Wailing_Caverns:
+            case Horde_Ragefire_Chasm:
+            case Horde_Deadmines:
+            case Horde_Shadowfang_Keep:
+            case Horde_Blackfathom_Deeps:
+            case Horde_Stormwind_Stockade:
+            case Horde_Scarlet_Monastery_Graveyard:
+            case Horde_Gnomeregan:
+            case Horde_Razorfen_Kraul:
+            case Horde_Razorfen_Downs:
+            case Horde_Scarlet_Monastery_Library:
+            case Horde_Scarlet_Monastery_Armory:
+            case Horde_Scarlet_Monastery_Cathedral:
+            case Horde_Maraudon_Orange:
+            case Horde_ZulFarrak:
+            case Horde_Maraudon_Purple:
+            case Horde_Uldaman_East:
+            case Horde_Maraudon_Pristine_Waters:
+            case Horde_Blackrock_Depths_Prison:
+            case Horde_Sunken_Temple:
+            case Horde_Dire_Maul_East:
+            case Horde_Lower_Blackrock_Spire:
+            case Horde_Upper_Blackrock_Spire:
+            case Horde_Dire_Maul_West:
+            case Horde_Dire_Maul_North:
+            case Horde_Stratholme_Undead:
+            case Horde_Stratholme_Living:
+            case Horde_Scholomance:
+            case Horde_Blackrock_Depths_Upper_City:
+            case Horde_Uldaman_West:
+            // Alliance quests
+            case Alliance_Wailing_Caverns:
+            case Alliance_Ragefire_Chasm:
+            case Alliance_Deadmines:
+            case Alliance_Shadowfang_Keep:
+            case Alliance_Blackfathom_Deeps:
+            case Alliance_Stormwind_Stockade:
+            case Alliance_Scarlet_Monastery_Graveyard:
+            case Alliance_Gnomeregan:
+            case Alliance_Razorfen_Kraul:
+            case Alliance_Razorfen_Downs:
+            case Alliance_Scarlet_Monastery_Armory:
+            case Alliance_Scarlet_Monastery_Cathedral:
+            case Alliance_Scarlet_Monastery_Library:
+            case Alliance_Uldaman_East:
+            case Alliance_ZulFarrak:
+            case Alliance_Maraudon_Orange:
+            case Alliance_Maraudon_Purple:
+            case Alliance_Maraudon_Pristine_Waters:
+            case Alliance_Blackrock_Depths_Prison:
+            case Alliance_Sunken_Temple:
+            case Alliance_Dire_Maul_East:
+            case Alliance_Lower_Blackrock_Spire:
+            case Alliance_Dire_Maul_West:
+            case Alliance_Dire_Maul_North:
+            case Alliance_Stratholme_Living:
+            case Alliance_Stratholme_Undead:
+            case Alliance_Upper_Blackrock_Spire:
+            case Alliance_Blackrock_Depths_Upper_City:
+            case Alliance_Scholomance:
+            case Alliance_Uldaman_West:
                 if (sIndividualProgression->repeatableVanillaQuestsXp)
                 {
                     // Reset the quest status so the player can take it and receive rewards again
