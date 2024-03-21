@@ -157,7 +157,7 @@ public:
                         {
                             me->CastSpell(finalTarget, SPELL_HATEFUL_STRIKE, false);
                         }
-                        events.RepeatEvent(1200);
+                        //events.RepeatEvent(1200);
                         break;
                     }
                 case EVENT_BERSERK:
