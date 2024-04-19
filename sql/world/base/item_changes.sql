@@ -3481,9 +3481,6 @@ UPDATE `item_template` SET `BuyPrice` = 11107 WHERE entry=5357;
 /*  Archery Training Gloves  */
 UPDATE `item_template` SET `BuyPrice` = 31 WHERE entry=5394;
 
-/*  Serpent's Shoulders  */
-UPDATE `item_template` SET `Quality` = 1, `armor` = 59, `BuyPrice` = 2345, `SellPrice` = 469, `bonding` = 0, `MaxDurability` = 45, `stat_type1` = 0, `stat_value1` = 0, `DisenchantID` = 0 WHERE entry=5404;
-
 /*  Draped Cloak  */
 UPDATE `item_template` SET `BuyPrice` = 36 WHERE entry=5405;
 
@@ -3969,9 +3966,6 @@ UPDATE `item_template` SET `BuyPrice` = 27181 WHERE entry=6431;
 
 /*  Imperial Cloak  */
 UPDATE `item_template` SET `BuyPrice` = 18708 WHERE entry=6432;
-
-/*  Worn Turtle Shell Shield  */
-UPDATE `item_template` SET `Quality` = 1, `armor` = 412, `BuyPrice` = 2810, `SellPrice` = 562, `block` = 6, `bonding` = 0, `MaxDurability` = 65, `DisenchantID` = 0 WHERE entry=6447;
 
 /*  Tail Spike  */
 UPDATE `item_template` SET `Quality` = 2, `BuyPrice` = 9714, `SellPrice` = 1942, `dmg_min1` = 14.0, `dmg_max1` = 26.0, `MaxDurability` = 45, `stat_value1` = 2, `stat_value2` = 2, `DisenchantID` = 23 WHERE entry=6448;
