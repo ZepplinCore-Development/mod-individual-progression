@@ -1567,8 +1567,9 @@ UPDATE `item_template` SET `BuyPrice` = 18316 WHERE entry=2942;
 /*  Cursed Eye of Paleth  */
 UPDATE `item_template` SET `spellid_1` = 7709 WHERE entry=2944;
 
-/*  Icicle Rod  */
+/*  Icicle Rod  
 UPDATE `item_template` SET `spellid_1` = 7703 WHERE entry=2950;
+*/
 
 /*  Watch Master's Cloak  */
 UPDATE `item_template` SET `BuyPrice` = 11606, `SellPrice` = 2321, `stat_type1` = 7 WHERE entry=2953;
@@ -2714,7 +2715,7 @@ UPDATE `item_template` SET `BuyPrice` = 3715 WHERE entry=4316;
 UPDATE `item_template` SET `spellid_1` = 7689 WHERE entry=4317;
 
 /*  Azure Silk Gloves  */
-UPDATE `item_template` SET `BuyPrice` = 4076, `spellid_1` = 7703 WHERE entry=4319;
+/* UPDATE `item_template` SET `BuyPrice` = 4076, `spellid_1` = 7703 WHERE entry=4319; */
 
 /*  Spidersilk Boots  */
 UPDATE `item_template` SET `BuyPrice` = 4897, `SellPrice` = 979, `ItemLevel` = 25, `MaxDurability` = 40, `stat_type1` = 6, `stat_value1` = 7, `RequiredLevel` = 20 WHERE entry=4320;
@@ -4534,8 +4535,9 @@ UPDATE `item_template` SET `BuyPrice` = 111 WHERE entry=7026;
 /*  Boots of Darkness  */
 UPDATE `item_template` SET `BuyPrice` = 5625, `spellid_1` = 7708 WHERE entry=7027;
 
-/*  Azure Silk Pants  */
+/*  Azure Silk Pants  
 UPDATE `item_template` SET `spellid_1` = 7703 WHERE entry=7046;
+*/
 
 /*  Hands of Darkness  */
 UPDATE `item_template` SET `BuyPrice` = 4124, `SellPrice` = 824, `spellid_1` = 7710 WHERE entry=7047;
@@ -4546,8 +4548,9 @@ UPDATE `item_template` SET `Quality` = 1, `armor` = 33, `BuyPrice` = 3725, `Sell
 /*  Silk Headband  */
 UPDATE `item_template` SET `Quality` = 1, `armor` = 34, `BuyPrice` = 4995, `SellPrice` = 999, `bonding` = 0, `stat_type1` = 0, `stat_value1` = 0, `stat_type2` = 0, `stat_value2` = 0, `stat_type3` = 0, `stat_value3` = 0, `DisenchantID` = 0 WHERE entry=7050;
 
-/*  Azure Silk Cloak  */
+/*  Azure Silk Cloak  
 UPDATE `item_template` SET `spellid_1` = 7703 WHERE entry=7053;
+*/
 
 /*  Robe of Power  */
 UPDATE `item_template` SET `BuyPrice` = 23504, `SellPrice` = 4700, `stat_value1` = 12, `stat_type2` = 6, `stat_value2` = 8, `stat_type3` = 0, `stat_value3` = 0, `spellid_1` = 9343 WHERE entry=7054;
@@ -7282,8 +7285,9 @@ UPDATE `item_template` SET `BuyPrice` = 597, `stat_type1` = 4, `stat_type2` = 7,
 /*  Quillshooter  */
 UPDATE `item_template` SET `dmg_min1` = 31.0, `dmg_max1` = 58.0 WHERE entry=10567;
 
-/*  Freezing Shard  */
+/*  Freezing Shard  
 UPDATE `item_template` SET `spellid_1` = 7703 WHERE entry=10572;
+*/
 
 /*  Boneslasher  */
 UPDATE `item_template` SET `BuyPrice` = 68773 WHERE entry=10573;
@@ -9502,8 +9506,9 @@ UPDATE `item_template` SET `BuyPrice` = 237 WHERE entry=14099;
 /*  Native Handwraps  */
 UPDATE `item_template` SET `BuyPrice` = 300 WHERE entry=14102;
 
-/*  Brightcloth Cloak  */
+/*  Brightcloth Cloak  
 UPDATE `item_template` SET `BuyPrice` = 48582, `spellid_1` = 7703 WHERE entry=14103;
+*/
 
 /*  Brightcloth Pants  */
 UPDATE `item_template` SET `BuyPrice` = 77420 WHERE entry=14104;
