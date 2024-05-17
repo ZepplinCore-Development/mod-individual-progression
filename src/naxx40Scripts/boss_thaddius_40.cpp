@@ -289,7 +289,7 @@ public:
             if (summonTimer) // Revive
             {
                 summonTimer += diff;
-                if (summonTimer >= 5000)
+                if (summonTimer >= 10000)
                 {
                     summons.DoAction(ACTION_RESTORE);
                     summonTimer = 0;
