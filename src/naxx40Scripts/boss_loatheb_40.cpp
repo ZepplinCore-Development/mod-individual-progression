@@ -154,8 +154,8 @@ public:
                 case EVENT_NECROTIC_AURA:
                     me->CastSpell(me, SPELL_NECROTIC_AURA, true);
                     Talk(SAY_NECROTIC_AURA_APPLIED);
-                    events.ScheduleEvent(EVENT_NECROTIC_AURA_FADING, 14000);
-                    events.ScheduleEvent(EVENT_NECROTIC_AURA_REMOVED, 17000);
+                    events.ScheduleEvent(EVENT_NECROTIC_AURA_FADING, 13000);
+                    events.ScheduleEvent(EVENT_NECROTIC_AURA_REMOVED, 15000);
                     events.RepeatEvent(20000);
                     break;
                 case EVENT_DEATHBLOOM:
