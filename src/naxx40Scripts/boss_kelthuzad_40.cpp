@@ -490,7 +490,7 @@ public:
                             cr->AI()->Talk(SAY_ANSWER_REQUEST);
                         }
                     }
-                    for (uint8 i = 0 ; i < 5; ++i)
+                    for (uint8 i = 0 ; i < 1; ++i) // reduced number of guardians to 1 from 5 because 5 is way too many beetle boys
                     {
                         events.ScheduleEvent(EVENT_SUMMON_GUARDIAN_OF_ICECROWN, 10000 + (i * 5000));
                     }
