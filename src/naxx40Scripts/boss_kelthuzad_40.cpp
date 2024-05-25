@@ -307,7 +307,7 @@ public:
             events.ScheduleEvent(EVENT_SUMMON_SOLDIER, 6400);
             events.ScheduleEvent(EVENT_SUMMON_UNSTOPPABLE_ABOMINATION, 10000);
             events.ScheduleEvent(EVENT_SUMMON_SOUL_WEAVER, 12000);
-            events.ScheduleEvent(EVENT_PHASE_2, 228000);
+            events.ScheduleEvent(EVENT_PHASE_2, 15000); // reduced from 228000 because this phase is boring as shit
             events.ScheduleEvent(EVENT_ENRAGE, 900000);
             if (pInstance)
             {
