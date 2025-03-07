@@ -127,7 +127,7 @@ public:
                     go->SetGoState(GO_STATE_ACTIVE);
                 }
                 // Close tunnel door
-                if (GameObject* go = me->GetMap()->GetGameObject(pInstance->GetGuidData(DATA_HEIGAN_EXIT_GATE)))
+                if (GameObject* go = me->GetMap()->GetGameObject(pInstance->GetGuidData(DATA_HEIGAN_EXIT_GATE_40)))
                 {
                     go->SetGoState(GO_STATE_READY);
                 }
@@ -164,12 +164,12 @@ public:
                     go->SetGoState(GO_STATE_READY);
                 }
                 // Open tunnel door
-                if (GameObject* go = me->GetMap()->GetGameObject(pInstance->GetGuidData(DATA_HEIGAN_EXIT_GATE)))
+                if (GameObject* go = me->GetMap()->GetGameObject(pInstance->GetGuidData(DATA_HEIGAN_EXIT_GATE_40)))
                 {
                     go->SetGoState(GO_STATE_ACTIVE);
                 }
                 // Close loatheb door
-                if (GameObject* go = me->GetMap()->GetGameObject(pInstance->GetGuidData(DATA_HEIGAN_EXIT_GATE_OLD)))
+                if (GameObject* go = me->GetMap()->GetGameObject(pInstance->GetGuidData(DATA_HEIGAN_EXIT_GATE_OLD_40)))
                 {
                     go->SetGoState(GO_STATE_READY);
                 }
@@ -232,7 +232,7 @@ public:
                 {
                     if (player->IsAlive() && !player->IsGameMaster())
                     {
-                        if (player->GetPositionX() <= 2769.0f)
+                        if (player->GetPositionY() <= -3735.0f)
                         {
                             player->KillSelf();
                         }

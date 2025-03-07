@@ -71,7 +71,7 @@ void IndividualProgression::ApplyGearStatsTuning(Player* player, float& computed
     if (item->Quality != ITEM_QUALITY_EPIC) // Non-endgame gear is okay
         return;
     if ((hasPassedProgression(player, PROGRESSION_NAXX40) && (item->RequiredLevel <= 60)) ||
-        hasPassedProgression(player, PROGRESSION_TBC_TIER_5) && (item->RequiredLevel <=70))
+        (hasPassedProgression(player, PROGRESSION_TBC_TIER_5) && (item->RequiredLevel <=70)))
     {
         computedAdjustment -= (100.0f * previousGearTuning);
     }
@@ -82,7 +82,7 @@ void IndividualProgression::ComputeGearTuning(Player* player, float& computedAdj
     if (item->Quality != ITEM_QUALITY_EPIC) // Non-endgame gear is okay
         return;
     if ((hasPassedProgression(player, PROGRESSION_NAXX40) && (item->RequiredLevel <= 60)) ||
-        hasPassedProgression(player, PROGRESSION_TBC_TIER_5) && (item->RequiredLevel <=70))
+        (hasPassedProgression(player, PROGRESSION_TBC_TIER_5) && (item->RequiredLevel <=70)))
     {
         computedAdjustment += previousGearTuning;
     }
@@ -91,12 +91,12 @@ void IndividualProgression::ComputeGearTuning(Player* player, float& computedAdj
 void IndividualProgression::AdjustVanillaStats(Player* player) const
 {
     float adjustmentValue = -100.0f * (1.0f - vanillaPowerAdjustment);
-    float adjustmentApplyPercent = (player->getLevel() - 10.0f) / 50.0f;
-    float computedAdjustment = player->getLevel() > 10 ? (adjustmentValue * adjustmentApplyPercent) : 0;
+    float adjustmentApplyPercent = (player->GetLevel() - 10.0f) / 50.0f;
+    float computedAdjustment = player->GetLevel() > 10 ? (adjustmentValue * adjustmentApplyPercent) : 0;
 
     float adjustmentHealingValue = -100.0f * (1.0f - vanillaHealingAdjustment);
-    float adjustmentHealingApplyPercent = (player->getLevel() - 10.0f) / 50.0f;
-    float computedHealingAdjustment = player->getLevel() > 10 ? (adjustmentHealingValue * adjustmentHealingApplyPercent) : 0;
+    float adjustmentHealingApplyPercent = (player->GetLevel() - 10.0f) / 50.0f;
+    float computedHealingAdjustment = player->GetLevel() > 10 ? (adjustmentHealingValue * adjustmentHealingApplyPercent) : 0;
 
     AdjustStats(player, computedAdjustment, computedHealingAdjustment);
 }
@@ -105,11 +105,11 @@ void IndividualProgression::AdjustTBCStats(Player* player) const
 {
     float adjustmentValue = -100.0f * (1.0f - tbcPowerAdjustment);
     float adjustmentApplyPercent = 1;
-    float computedAdjustment = player->getLevel() > 10 ? (adjustmentValue * adjustmentApplyPercent) : 0;
+    float computedAdjustment = player->GetLevel() > 10 ? (adjustmentValue * adjustmentApplyPercent) : 0;
 
     float adjustmentHealingValue = -100.0f * (1.0f - tbcHealingAdjustment);
     float adjustmentHealingApplyPercent = 1;
-    float computedHealingAdjustment = player->getLevel() > 10 ? (adjustmentHealingValue * adjustmentHealingApplyPercent) : 0;
+    float computedHealingAdjustment = player->GetLevel() > 10 ? (adjustmentHealingValue * adjustmentHealingApplyPercent) : 0;
 
     for (uint8 i = EQUIPMENT_SLOT_START; i < EQUIPMENT_SLOT_END; ++i)
     {
@@ -133,11 +133,11 @@ void IndividualProgression::AdjustWotLKStats(Player* player) const
     AdjustStats(player, computedAdjustment, computedAdjustment);
 }
 
-void IndividualProgression::AdjustStats(Player* player, float computedAdjustment, float computedHealingAdjustment)
+void IndividualProgression::AdjustStats(Player* player, float computedAdjustment, float /*computedHealingAdjustment*/)
 {
-    int32 bp0 = 0; // This would be the damage taken adjustment value, but we are already adjusting health
+    // int32 bp0 = 0; // This would be the damage taken adjustment value, but we are already adjusting health
     auto bp1 = static_cast<int32>(computedAdjustment);
-    auto bp1Healing = static_cast<int32>(computedHealingAdjustment);
+    // auto bp1Healing = static_cast<int32>(computedHealingAdjustment);
 
     player->RemoveAura(ABSORB_SPELL);
     player->CastCustomSpell(player, ABSORB_SPELL, &bp1, nullptr, nullptr, false);
@@ -315,6 +315,8 @@ private:
         sIndividualProgression->LoadCustomProgressionEntries(sConfigMgr->GetOption<std::string>("IndividualProgression.CustomProgression", ""));
         sIndividualProgression->earlyDungeonSet2 = sConfigMgr->GetOption<bool>("IndividualProgression.AllowEarlyDungeonSet2", true);
         sIndividualProgression->pvpGearRequirements = sConfigMgr->GetOption<bool>("IndividualProgression.PvPGearRequirements", true);
+        sIndividualProgression->excludeAccounts = sConfigMgr->GetOption<bool>("IndividualProgression.ExcludeAccounts", false);
+        sIndividualProgression->excludedAccountsRegex = sConfigMgr->GetOption<std::string>("IndividualProgression.ExcludedAccountsRegex", "");
     }
 
     static void LoadXpValues()
