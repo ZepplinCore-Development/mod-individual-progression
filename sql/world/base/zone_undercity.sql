@@ -106,6 +106,11 @@ INSERT INTO `conditions` (`SourceTypeOrReferenceId`, `SourceGroup`, `SourceEntry
 DELETE FROM `creature_queststarter` WHERE `id`=4563 AND `quest`=4489;
 INSERT INTO `creature_queststarter` (`id`, `quest`) VALUES (4563, 4489);
 
+-- Mary Edras <First Aid Trainer> 
+DELETE FROM `npc_trainer` WHERE `ID`=4591; 
+INSERT INTO `npc_trainer` (`ID`, `SpellID`) VALUES (4591, -350000); 
+
+
 /* Replace orc guards with pre-wrathgate abomination guards */
 UPDATE `creature` SET `id1`=5624, `equipment_id`=0 WHERE `id1`=36213;
 
@@ -145,6 +150,9 @@ INSERT INTO `gossip_menu_option` (`MenuID`, `OptionID`, `OptionIcon`, `OptionTex
 /* Wrathgate NPCs - just deleting for now, but maybe can implement a post-Wrathgate world state later */
 DELETE FROM `creature` WHERE `guid` IN (43466, 79263);
 
+/* Disable conversation between Faranell and deleted Wrathgate NPC Kraggosh */
+UPDATE `creature_template` SET `AINAME` = '' WHERE `entry` = 2055;
+
 /* Restore quests series The Deathstalkers */
 DELETE FROM `creature_questender` WHERE `id` = 6467 AND `quest` = 14420;
 DELETE FROM `creature_questender` WHERE `id` = 6467 AND `quest` = 14421;
@@ -165,6 +173,9 @@ REPLACE INTO `creature_queststarter` (`id`, `quest`) VALUES (6522, 1899);
 UPDATE `quest_template` SET `RewardNextQuest` = 1898 WHERE `ID` = 1886;
 UPDATE `quest_template` SET `RewardNextQuest` = 1899 WHERE `ID` = 1898;
 UPDATE `quest_template` SET `RewardNextQuest` = 1978 WHERE `ID` = 1899;
+
+UPDATE `conditions` SET `ConditionValue1`= 1886,  `comment` = 'Astor Hadren - Show gossip if quest 1886 is taken' WHERE `SourceTypeOrReferenceId` = 15 AND `SourceGroup` = 126;
+
 
 /* Restore Varimathras */
 UPDATE `creature` SET `id1`=2425, `equipment_id`=0 WHERE `id1`=36273;
