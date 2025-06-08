@@ -2943,8 +2943,6 @@ UPDATE quest_template SET RewardFactionOverride1=0, RewardFactionOverride2=0,Rew
 
 UPDATE reputation_reward_rate SET quest_rate=1, quest_daily_rate=1, quest_repeatable_rate=1 WHERE faction=576;
 
-UPDATE reputation_reward_rate SET quest_rate=1, quest_daily_rate=1, quest_repeatable_rate=1 WHERE faction=576;
-
 UPDATE quest_template SET RewardFactionOverride1 = 0 WHERE RewardFactionId1=0;
 UPDATE quest_template SET RewardFactionOverride2 = 0 WHERE RewardFactionId2=0;
 UPDATE quest_template SET RewardFactionOverride3 = 0 WHERE RewardFactionId3=0;
